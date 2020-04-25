@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import WeatherEngine from "./components/WeatherEngine";
 import "./App.css";
 function App() {
@@ -6,6 +6,7 @@ function App() {
     <div className="App">
       <WeatherEngine location="Milan,it" />
       <WeatherEngine location="Venice,it" />
+      <WeatherEngine location="Rome,it" />
       <WeatherEngine location="Rome,it" />
     </div>
   );

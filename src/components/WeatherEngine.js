@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import WeatherCard from "./WeatherCard/component";
-import styled from "@emotion/styled";
 
 const WeatherEngine = ({ location }) => {
   const [query, setQuery] = useState("");
@@ -43,15 +42,18 @@ const WeatherEngine = ({ location }) => {
 
 
   return (
-    <div class="weatherengine">
+    <div>
       {!loading && !error ? (
         <div>
-          <form>
+          <form id="search-weather">
             <input
+              id="input-search-weather"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
             ></input>
-            <button onClick={(e) => handleSearch(e)}>Search</button>
+            <button id="btn-search-weather" onClick={(e) => handleSearch(e)}>
+              Search
+            </button>
           </form>
           <WeatherCard
             city={weather.city}
