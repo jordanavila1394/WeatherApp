@@ -1,10 +1,12 @@
-import React from "react";
-import WeatherCard from "./components/WeatherCard/component";
+import React, { useState, useEffect } from "react";
+import WeatherEngine from "./components/WeatherEngine";
 import "./App.css";
 function App() {
   return (
     <div className="App">
-      <WeatherCard />
+      <WeatherEngine location="Milan,it" />
+      <WeatherEngine location="Venice,it" />
+      <WeatherEngine location="Rome,it" />
     </div>
   );
 }

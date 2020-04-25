@@ -1,6 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&family=Merriweather:ital,wght@1,300&display=swap");
+.App {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 40%;
+  background: #e6e2dc;
+}
+.App > div{
+ /*
+    1/3  - 3 columns per row
+    10px - spacing between columns 
+  */
+  box-sizing: border-box;
+  margin: 10px 10px 0 0;
+  width: calc(1/3*100% - (1 - 1/3)*10px);
+  padding: 10px;
+  color: #fff;
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&family=Merriweather:ital,wght@1,300&display=swap');
-.App{
-    margin:0 auto;
-    color: white;
+/*
+  align last row columns to the left
+  3n - 3 columns per row
+*/
+.App > div:nth-child(3n) {
+  margin-right: 0;
+}
+
+.App::after {
+  content: '';
+  flex: auto;
+}
+
+/*
+  remove top margin from first row
+  -n+3 - 3 columns per row 
+*/
+.App > div:nth-child(-n+3) {
+  margin-top: 0;
+}
+
+
+
+.weatherengine{
+    display: flex;
 }
