@@ -29,12 +29,13 @@ const WeatherCard = ({ city, country, temp, condition }) => {
   const Card = styled.div`
     margin-top:5px;
     background: ${bg};
-    height: 280px;
+    color: white;
+    height:220px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    border-radius: 15px;
+    border-radius: 10px;
   `;
   return (
     <Card>
