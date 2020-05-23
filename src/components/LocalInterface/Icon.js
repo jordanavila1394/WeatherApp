@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 
 const Icon = (props) => {
   const Icon = styled.img`
+   margin:20px;
   `;
 
   var icon = "";
@@ -47,7 +48,11 @@ const Icon = (props) => {
       icon = `./img/Fog-4x.png`;
       break;
   }
-  return <Icon src={icon} alt="Weather Icon" />;
+  return (
+    <div className="floating">
+      <Icon src={icon} alt="Weather Icon" />
+    </div>
+  );
 };
 
 export default Icon;

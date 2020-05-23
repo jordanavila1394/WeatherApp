@@ -3,14 +3,14 @@ import styled from "@emotion/styled";
 
 const Icon = (props) => {
   const Icon = styled.img`
-    margin: 0;
-    top: 50%;
-   
-  `;
-const Container = styled.div`
-  height: 150px;
   
-`;
+  `;
+  const Container = styled.div`
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    -webkit-animation: float 6s ease-in-out infinite;
+  `;
   var icon = "";
   switch (props.condition) {
     case "Clouds":
@@ -44,7 +44,7 @@ const Container = styled.div`
       icon = `./img/Rain-2x.png`;
       break;
     case "Drizzle":
-      icon = `./img/Drizzle-2x.png`;
+      icon = `./img/Drizzle-2.png`;
       break;
     case "Thunderstorm":
       icon = `./img/Severe Thunderstorm-2x.png`;

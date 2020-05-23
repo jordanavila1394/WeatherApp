@@ -2,22 +2,21 @@ import React from "react";
 import styled from "@emotion/styled";
 
 const Temperature = (props) => {
-  const Temp = styled.h2`
+  const Temp = styled.h4`
     font-family: "Fira Sans", sans-serif;
-    font-size: 4em;
     font-weight: 200;
   `;
-  const TempMin = styled.h2`
+  const TempMin = styled.h5`
     font-family: "Fira Sans", sans-serif;
-    font-size: 1em;
     font-weight: 200;
+    text-align: center;
     margin: 10px;
     text-align: center;
   `;
-  const TempMax = styled.h2`
+  const TempMax = styled.h5`
     font-family: "Fira Sans", sans-serif;
-    font-size: 1em;
     font-weight: 200;
+    text-align: center;
     margin: 10px;
     text-align: center;
   `;

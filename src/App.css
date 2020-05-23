@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&family=Merriweather:ital,wght@1,300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
 *{
  margin: 0;
  padding: 0;
@@ -59,11 +60,9 @@ input[type="text"] {
   display: inline-block;
 }
 /*DASHBOARD DIVISION*/
-#container {
-}
+
 #primary {
   float: left;
-  width: 30%;
   margin: 10px;
   background: inherit;
   box-shadow: 0 5px 15px rgba(0,0,0,.5);
@@ -75,6 +74,8 @@ input[type="text"] {
   display: flex;
   flex-direction: column;
   float: left;
+    color: white;
+
 }
 #secondary-top {
   flex: 1;
@@ -84,11 +85,13 @@ input[type="text"] {
   overflow: hidden;
 }
 #secondary-bottom {
-  flex: 1;
+  flex: 1;margin: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.5);
 }
 #tertiary {
+  flex: 1;
+  margin: 10px;
   float: left;
-  width: 30%;
 }
 
 #footer {
@@ -116,4 +119,19 @@ input[type="text"] {
   flex-direction: row;
   justify-content: space-around; 
   color: white;
+}
+
+.floating {  
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); }    
 }

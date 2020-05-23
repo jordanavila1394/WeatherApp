@@ -1,13 +1,14 @@
 import React from "react";
 import styled from "@emotion/styled";
-import Location from "./Location";
+import Day from "./Day";
 import Condition from "./Condition";
 import Temperature from "./Temperature";
 import Icon from "./Icon";
+import { mapDay } from "../mappers/mapDay";
 
-const LocalInterface = (props) => {
+const LocalWeatherDaysInterface = (props) => {
   const Interface = styled.div`
-    margin-top: 5px;
+    margin: 10px;
     color: white;
     display: flex;
     flex-direction: column;
@@ -17,16 +18,16 @@ const LocalInterface = (props) => {
   `;
   return (
     <Interface>
-      <Location city={props.city} country={props.country} />
+      <Day day={mapDay(props.day)}></Day>
+      <Icon condition={props.condition} />
       <Temperature
         temp={props.temp}
         tempmin={props.tempmin}
         tempmax={props.tempmax}
       />
-      <Icon condition={props.condition} />
-      <Condition condition={props.condition} />
+      <Condition condition={props.condition}></Condition>
     </Interface>
   );
 };
 
-export default LocalInterface;
+export default LocalWeatherDaysInterface;

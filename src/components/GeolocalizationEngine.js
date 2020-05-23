@@ -2,26 +2,32 @@ import React from "react";
 import { geolocated } from "react-geolocated";
 import Coordinates from "./LocalInterface/Coordinates";
 import LocalInterfaceEngine from "./LocalInterfaceEngine";
+import LocalWeatherDaysInterfaceEngine from "./LocalWeatherDaysInterfaceEngine";
 
 class GeolocalizationEngine extends React.Component {
   render() {
     return !this.props.isGeolocationAvailable ? (
-          <div>Your browser does not support Geolocation</div>
-        ) : !this.props.isGeolocationEnabled ? (
-          <div>Geolocation is not enabled</div>
-        ) : this.props.coords ? (
-             <>
-          <Coordinates
-            lat={this.props.coords.latitude}
-            long={this.props.coords.longitude}
-          />
-          <LocalInterfaceEngine
+      <div>Your browser does not support Geolocation</div>
+    ) : !this.props.isGeolocationEnabled ? (
+      <div>Geolocation is not enabled</div>
+    ) : this.props.coords ? (
+      <>
+        <Coordinates
           lat={this.props.coords.latitude}
           long={this.props.coords.longitude}
-        /></>
-        ) : (
-          <div>Getting the location data&hellip; </div>
-        )
+        />
+        <LocalInterfaceEngine
+          lat={this.props.coords.latitude}
+          long={this.props.coords.longitude}
+        />
+        <LocalWeatherDaysInterfaceEngine
+          lat={this.props.coords.latitude}
+          long={this.props.coords.longitude}
+        />
+      </>
+    ) : (
+      <div>Getting the location data&hellip; </div>
+    );
   }
 }
 

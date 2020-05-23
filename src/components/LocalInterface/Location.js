@@ -7,7 +7,6 @@ const Location = ({city, country}) => {
   `;
   const City = styled.h1`
     font-family: "Merriweather", sans-serif;
-    font-size: 4em;
     font-weight: 200;
   `;
   const Country = styled.h3`

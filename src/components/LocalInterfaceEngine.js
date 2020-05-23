@@ -38,7 +38,11 @@ const LocalInterfaceEngine = (props) => {
   };
 
   useEffect(() => {
-    getWeather(props.lat, props.long);
+    let mounted = true;
+    if (mounted) {
+      getWeather(props.lat, props.long);
+    }
+    return () => (mounted = false);
   }, [props.lat, props.long]);
 
   return (

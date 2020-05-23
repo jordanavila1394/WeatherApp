@@ -30,13 +30,11 @@ const WeatherCard = ({ city, country, temp, condition }) => {
     margin-top:5px;
     background: ${bg};
     color: white;
-    height:220px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
-    border-radius: 10px;
   `;
+  
   return (
     <Card>
       <Location city={city} country={country} />

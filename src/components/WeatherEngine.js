@@ -37,7 +37,11 @@ const WeatherEngine = ({ location }) => {
   };
 
   useEffect(() => {
-    getWeather(location);
+    let mounted = true;
+    if (mounted) {
+      getWeather(location);
+    }
+    return () => (mounted = false);
   }, [location]);
 
 
