@@ -18,7 +18,7 @@ const LocalInterfaceEngine = (props) => {
     setLoading(true);
     try {
       const apiRes = await fetch(
-        `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&appid=66078692e0509c69feafa50ea0fc551f`
+        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&appid=66078692e0509c69feafa50ea0fc551f`
       );
       const resJSON = await apiRes.json();
       console.log(resJSON);
