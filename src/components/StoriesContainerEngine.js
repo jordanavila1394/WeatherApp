@@ -4,7 +4,7 @@ import Story from "./StoriesContainer/Story";
 import styled from "@emotion/styled";
 import { useInfiniteScroll } from "./StoriesContainer/useInfinityScroll";
 const StoriesContainerEngine = (props) => {
-  const { count } = useInfiniteScroll();
+  const { count, setCount } = useInfiniteScroll();
   const [storyIds, setStoryIds] = useState([]);
   useEffect(() => {
     let mounted = true;
@@ -12,7 +12,7 @@ const StoriesContainerEngine = (props) => {
       getStoryIds().then((data) => setStoryIds(data));
     }
     return () => (mounted = false);
-  }, [count]);
+  }, [count, setCount]);
 
   const StoriesContainerWrapper = styled.main`
     padding: 20px 15px;

@@ -23,7 +23,7 @@ export const useInfiniteScroll = () => {
       setCount(count + STORY_INCREMENT);
     }
     setLoading(false);
-  }, [loading]);
+  }, [count, loading]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
